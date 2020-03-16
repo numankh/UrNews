@@ -12,7 +12,13 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+
 import TempList from './components/TempList';
+import Home from './components/Home';
+import OtherPage from './components/OtherPage';
+
+import { Route } from 'react-router';
+import { Switch } from 'react-router-dom';
 
 const drawerWidth = 240;
 
@@ -134,30 +140,13 @@ export default function MiniDrawer() {
             {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
           </IconButton>
         </div>
-        {/* <Divider />
-        <List>
-          {['Financials', 'Technology', 'Health Care', 'Real Estate', 'Energy', 'Communication'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List> */}
 
         <TempList />
+
       </Drawer>
       <main className={classes.content}>
         <div className={classes.toolbar} />
-        <Typography paragraph>
+        {/* <Typography paragraph>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum
           facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit
@@ -179,7 +168,12 @@ export default function MiniDrawer() {
           tortor. Habitant morbi tristique senectus et. Adipiscing elit duis tristique sollicitudin
           nibh sit. Ornare aenean euismod elementum nisi quis eleifend. Commodo viverra maecenas
           accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam ultrices sagittis orci a.
-        </Typography>
+        </Typography> */}
+
+        <Switch>
+          <Route exact path='/' component={Home}/>
+          <Route path='/finance' component={OtherPage}/>
+        </Switch>
       </main>
     </div>
   );
