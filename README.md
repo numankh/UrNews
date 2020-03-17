@@ -4,6 +4,8 @@
 ### Front-end
 https://material-ui.com/components/drawers/
 https://pusher.com/tutorials/consume-restful-api-react
+https://blog.pshrmn.com/simple-react-router-v4-tutorial/
+https://codesandbox.io/s/vvoqvk78?from-embed
 
 ### Back-end
 https://newsapi.org/docs/client-libraries/python
