@@ -1,3 +1,14 @@
+# StockSignal 
+## Links I Used When Building This App
+
+### Front-end
+https://material-ui.com/components/drawers/
+https://pusher.com/tutorials/consume-restful-api-react
+
+### Back-end
+https://newsapi.org/docs/client-libraries/python
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
