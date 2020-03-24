@@ -13,7 +13,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 
-import TempList from './components/TempList';
+import SideBar from './components/SideBar';
 import Home from './components/Home';
 
 import { Route } from 'react-router';
@@ -148,7 +148,7 @@ export default function MiniDrawer() {
           </IconButton>
         </div>
 
-        <TempList />
+        <SideBar />
 
       </Drawer>
       <main className={classes.content}>
