@@ -154,7 +154,7 @@ export default function MiniDrawer() {
       <main className={classes.content}>
         <div className={classes.toolbar} />
         <Switch>
-          <Route exact path='/' component={Home}/>
+          <Route exact path='/' component={Finance}/>
           <Route path='/finance' component={Finance}/>
           <Route path='/tech' component={Tech}/>
           <Route path='/health' component={Health}/>

@@ -71,7 +71,7 @@ def get_housing_news(event, context):
 
     newsapi = NewsApiClient(api_key = os.environ.get('NEWS_API_KEY'))
 
-    all_articles = newsapi.get_everything(q='real estate',
+    all_articles = newsapi.get_everything(q='real estate investment',
                                           sources='abc-news,cnn,fox-news,google-news',
                                           from_param='2020-03-12',
                                           to='2020-03-21',
@@ -92,7 +92,7 @@ def get_energy_news(event, context):
 
     newsapi = NewsApiClient(api_key = os.environ.get('NEWS_API_KEY'))
 
-    all_articles = newsapi.get_everything(q='energy',
+    all_articles = newsapi.get_everything(q='oil',
                                           sources='bbc-news,abc-news,cnn,fox-news',
                                           from_param='2020-03-12',
                                           to='2020-03-21',
