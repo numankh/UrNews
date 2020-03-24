@@ -1,9 +1,38 @@
-import React from 'react'
+import React, {Component} from 'react'
+import FeedItem from '../components/FeedItem'
 
-const Energy = () => (
-  <div>
-    <h1>This is the energy page</h1>
-  </div>
-)
+class Energy extends Component {
 
-export default Energy
+  state = {
+    todos: []
+  };
+
+  componentDidMount() {
+    fetch(process.env.REACT_APP_ENERGY_ENDPOINT)
+    .then(res => res.json())  //parses output to JSON
+    .then((data) => {
+      this.setState({ todos: data })
+      console.log(this.state.todos)
+    })
+    .catch(console.log)
+  }
+
+  render() {
+    return (
+      <div className="container">
+        <div className="col-xs-12">
+        <h1>Energy News</h1>
+        {this.state.todos.map((todo) => (
+          <FeedItem 
+            title={todo.title} 
+            description={todo.description} 
+            url={todo.url}
+          />
+        ))}
+        </div>
+       </div>
+    );
+  }
+}
+
+export default Energy;

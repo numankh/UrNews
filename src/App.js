@@ -25,7 +25,6 @@ import Health from './pages/Health'
 import Housing from './pages/Housing'
 import Energy from './pages/Energy'
 import Comm from './pages/Comm'
-import { green } from '@material-ui/core/colors';
 
 const drawerWidth = 240;
 

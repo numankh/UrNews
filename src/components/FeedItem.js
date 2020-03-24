@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import Paper from '@material-ui/core/Paper';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
 
 // const useStyles = makeStyles(theme => ({
 //     paper: {
@@ -18,7 +17,7 @@ class FeedItem extends Component {
         return (
             
                 <Paper style={{ margin: 16, padding: 16 }}>
-                    <a href={this.props.url} target="_blank">
+                    <a href={this.props.url} target="_blank" rel="noopener noreferrer">
                         <h2>{this.props.title}</h2>
                     </a>
                     <h5>{this.props.description}</h5>

@@ -1,9 +1,38 @@
-import React from 'react'
+import React, {Component} from 'react'
+import FeedItem from '../components/FeedItem'
 
-const Health = () => (
-  <div>
-    <h1>This is the health page</h1>
-  </div>
-)
+class Health extends Component {
 
-export default Health
+  state = {
+    todos: []
+  };
+
+  componentDidMount() {
+    fetch(process.env.REACT_APP_HEALTH_ENDPOINT)
+    .then(res => res.json())  //parses output to JSON
+    .then((data) => {
+      this.setState({ todos: data })
+      console.log(this.state.todos)
+    })
+    .catch(console.log)
+  }
+
+  render() {
+    return (
+      <div className="container">
+        <div className="col-xs-12">
+        <h1>Health News</h1>
+        {this.state.todos.map((todo) => (
+          <FeedItem 
+            title={todo.title} 
+            description={todo.description} 
+            url={todo.url}
+          />
+        ))}
+        </div>
+       </div>
+    );
+  }
+}
+
+export default Health;
