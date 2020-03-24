@@ -9,6 +9,8 @@
 
 ### Back-end
 * https://newsapi.org/docs/client-libraries/python
+* https://hackernoon.com/creating-serverless-functions-with-python-and-aws-lambda-901d202d45dc
+* https://serverless.com/blog/cors-api-gateway-survival-guide/#cors-response-headers
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
