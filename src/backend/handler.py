@@ -51,7 +51,7 @@ def get_tech_news(event, context):
     newsapi = NewsApiClient(api_key = os.environ.get('NEWS_API_KEY'))
 
     all_articles = newsapi.get_everything(q='tech',
-                                          sources='techcrunch,hacker-news,crypto-coins-news,engadget',
+                                          sources='techcrunch,hacker-news,crypto-coins-news,bloomberg',
                                           from_param='2020-03-12',
                                           to='2020-03-21',
                                           language='en')
