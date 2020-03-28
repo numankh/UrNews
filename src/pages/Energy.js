@@ -27,6 +27,7 @@ class Energy extends Component {
             title={todo.title} 
             description={todo.description} 
             url={todo.url}
+            image={todo.urlToImage}
           />
         ))}
         </div>
