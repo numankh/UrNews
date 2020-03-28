@@ -1,5 +1,7 @@
-import React, {Component} from 'react'
-import FeedItem from '../components/FeedItem'
+import React, {Component} from 'react';
+import FeedItem from '../components/FeedItem';
+import Grid from '@material-ui/core/Grid';
+
 
 class Finance extends Component {
 
@@ -22,14 +24,18 @@ class Finance extends Component {
       <div className="container">
         <div className="col-xs-12">
         <h1>Finance News</h1>
-        {this.state.todos.map((todo) => (
-          <FeedItem 
-            title={todo.title} 
-            description={todo.description} 
-            url={todo.url}
-            image={todo.urlToImage}
-          />
-        ))}
+          <Grid container spacing={3}>
+            {this.state.todos.map((todo) => (
+              <Grid item xs={4}>
+                <FeedItem 
+                  title={todo.title} 
+                  description={todo.description} 
+                  url={todo.url}
+                  image={todo.urlToImage}
+                />
+              </Grid>
+            ))}
+          </Grid>
         </div>
        </div>
     );
