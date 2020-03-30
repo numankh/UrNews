@@ -26,7 +26,6 @@ import Housing from './pages/Housing'
 import Energy from './pages/Energy'
 import Comm from './pages/Comm'
 
-import PageTemplate from './components/PageTemplate'
 
 const drawerWidth = 240;
 
