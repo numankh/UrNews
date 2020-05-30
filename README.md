@@ -1,4 +1,4 @@
-# StockSignal 
+# UrNews 
 ## Resources I Used When Building This App
 
 ### Front-end
