@@ -14,7 +14,6 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 
 import SideBar from './components/SideBar';
-import Home from './components/Home';
 
 import { Route } from 'react-router';
 import { Switch } from 'react-router-dom';
