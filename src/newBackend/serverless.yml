@@ -1,0 +1,43 @@
+service: UrNews
+
+provider:
+  name: aws
+  runtime: python3.7
+  environment:
+    NEWS_API_KEY: "37e1e448501c43beb30139549c552570"
+
+functions:
+  get_finance_news: 
+    handler: handler.get_finance_news 
+    events: 
+      - http:
+          path: finance
+          method: get
+  get_health_news: 
+    handler: handler.get_health_news 
+    events: 
+      - http:
+          path: health
+          method: get
+  get_housing_news: 
+    handler: handler.get_housing_news 
+    events: 
+      - http:
+          path: housing
+          method: get
+  get_energy_news: 
+    handler: handler.get_energy_news 
+    events: 
+      - http:
+          path: energy
+          method: get
+  get_comm_news: 
+    handler: handler.get_comm_news 
+    events: 
+      - http:
+          path: comm
+          method: get      
+  
+
+plugins:
+  - serverless-python-requirements
