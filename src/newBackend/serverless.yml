@@ -37,7 +37,12 @@ functions:
       - http:
           path: comm
           method: get      
-  
+  get_tech_news: 
+    handler: handler.get_tech_news 
+    events: 
+      - http:
+          path: tech
+          method: get   
 
 plugins:
   - serverless-python-requirements
