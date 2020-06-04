@@ -1,7 +1,14 @@
 import json
 import os
 from newsapi import NewsApiClient
+from datetime import datetime, timedelta
 
+def startDate():
+    d = datetime.today() - timedelta(days=7)
+    return str(d.date())
+
+def endDate():
+    return str(datetime.today().date())
 
 def get_finance_news(event, context):
 
@@ -9,8 +16,8 @@ def get_finance_news(event, context):
 
     all_articles = newsapi.get_everything(q='finance',
                                           sources='bbc-news,bloomberg,business-insider',
-                                          from_param='2020-05-25',
-                                          to='2020-05-31',
+                                          from_param= startDate(),
+                                          to= endDate(),
                                           language='en')
 
     response = {
