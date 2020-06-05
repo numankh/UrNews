@@ -1,37 +1,35 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 class MyForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      username: '',
-      age: null,
+    this.state = { 
+      phone_number: '' 
     };
   }
+  mySubmitHandler = (event) => {
+    event.preventDefault();
+    alert("You are submitting " + this.state.phone_number);
+  }
   myChangeHandler = (event) => {
-    let nam = event.target.name;
-    let val = event.target.value;
-    this.setState({[nam]: val});
+    this.setState({phone_number: event.target.value});
   }
   render() {
     return (
-      <form>
-      <h1>Hello {this.state.username} {this.state.age}</h1>
-      <p>Enter your name:</p>
+      <form onSubmit={this.mySubmitHandler}>
+      <h1>Hello {this.state.phone_number}</h1>
+      <p>Enter your name, and submit:</p>
       <input
         type='text'
-        name='username'
         onChange={this.myChangeHandler}
       />
-      <p>Enter your age:</p>
       <input
-        type='text'
-        name='age'
-        onChange={this.myChangeHandler}
+        type='submit'
       />
       </form>
     );
   }
 }
 
-export default MyForm;
+export default MyForm
