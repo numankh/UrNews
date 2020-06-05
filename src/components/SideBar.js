@@ -10,6 +10,7 @@ import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
 import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
 import PhoneInTalkIcon from '@material-ui/icons/PhoneInTalk';
 import DevicesOtherIcon from '@material-ui/icons/DevicesOther';
+import MessageIcon from '@material-ui/icons/Message';
 import FireIcon from '@material-ui/icons/Whatshot';
 
 
@@ -48,6 +49,7 @@ export default function ListRouter() {
         <ListItemLink to="/housing" primary="Real Estate" icon={<HouseIcon />} />
         <ListItemLink to="/energy" primary="Energy" icon={<FireIcon />} />
         <ListItemLink to="/comm" primary="Communication" icon={<PhoneInTalkIcon />} />
+        <ListItemLink to="/msgs" primary="Get Notifications" icon={<MessageIcon />} />
     </List>
   );
 }

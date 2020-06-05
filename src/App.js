@@ -24,7 +24,7 @@ import Health from './pages/Health'
 import Housing from './pages/Housing'
 import Energy from './pages/Energy'
 import Comm from './pages/Comm'
-
+import TextMsgs from './pages/TextMsgs'
 
 const drawerWidth = 240;
 
@@ -161,6 +161,7 @@ export default function MiniDrawer() {
           <Route path='/housing' component={Housing}/>
           <Route path='/energy' component={Energy}/>
           <Route path='/comm' component={Comm}/>
+          <Route path='/msgs' component={TextMsgs}/>
         </Switch>
       </main>
     </div>
