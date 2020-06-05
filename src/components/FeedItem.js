@@ -40,6 +40,11 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
+import CardHeader from '@material-ui/core/CardHeader';
+import Avatar from '@material-ui/core/Avatar';
+import IconButton from '@material-ui/core/IconButton';
+import MoreVertIcon from '@material-ui/icons/MoreVert';
+
 // const useStyles = makeStyles({
 //   root: {
 //     maxWidth: 345,
@@ -60,34 +65,31 @@ class FeedItem extends Component {
     return (
         
         <StyledCard>
-
-        <CardActionArea>
-            <CardMedia
-                component="img"
-                alt="Contemplative Reptile"
-                height="200"
-                image={this.props.image}
-                title="Contemplative Reptile"
-            />
-            <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
-                {this.props.title}
-            </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-                {this.props.description}
-            </Typography>
-            </CardContent>
-        </CardActionArea>
-        <CardActions>
-            <Button size="small" color="primary">
-            Share
-            </Button>
-            <a href={this.props.url} target="_blank" rel="noopener noreferrer">
-                <Button size="small" color="primary">
-                Learn More
-                </Button>
-            </a>
-        </CardActions>
+            <CardActionArea>
+                <CardMedia
+                    component="img"
+                    height="200"
+                    image={this.props.image}
+                />
+                <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                        {this.props.title}
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                        {this.props.description}
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
+            <CardActions>
+                {/* <Button size="small" color="primary">
+                Share
+                </Button> */}
+                <a href={this.props.url} target="_blank" rel="noopener noreferrer">
+                    <Button size="small" color="primary">
+                    Learn More
+                    </Button>
+                </a>
+            </CardActions>
         </StyledCard>
     );
   }

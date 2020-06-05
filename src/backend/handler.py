@@ -16,8 +16,8 @@ def get_finance_news(event, context):
 
     all_articles = newsapi.get_everything(q='finance',
                                           sources='bbc-news,bloomberg,business-insider',
-                                          from_param= startDate(),
-                                          to= endDate(),
+                                          from_param=startDate(),
+                                          to=endDate(),
                                           language='en')
 
     response = {
@@ -37,8 +37,8 @@ def get_health_news(event, context):
 
     all_articles = newsapi.get_everything(q='health care',
                                           sources='abc-news,cnn,fox-news,google-news',
-                                          from_param='2020-05-25',
-                                          to='2020-05-31',
+                                          from_param=startDate(),
+                                          to=endDate(),
                                           language='en')
 
     response = {
@@ -58,8 +58,8 @@ def get_tech_news(event, context):
 
     all_articles = newsapi.get_everything(q='tech',
                                           sources='techcrunch,hacker-news,crypto-coins-news,bloomberg',
-                                          from_param='2020-05-25',
-                                          to='2020-05-31',
+                                          from_param=startDate(),
+                                          to=endDate(),
                                           language='en')
 
     response = {
@@ -79,8 +79,8 @@ def get_housing_news(event, context):
 
     all_articles = newsapi.get_everything(q='real estate investment',
                                           sources='abc-news,cnn,fox-news,google-news',
-                                          from_param='2020-05-25',
-                                          to='2020-05-31',
+                                          from_param=startDate(),
+                                          to=endDate(),
                                           language='en')
 
     response = {
@@ -100,8 +100,8 @@ def get_energy_news(event, context):
 
     all_articles = newsapi.get_everything(q='oil',
                                           sources='bbc-news,abc-news,cnn,fox-news',
-                                          from_param='2020-05-25',
-                                          to='2020-05-31',
+                                          from_param=startDate(),
+                                          to=endDate(),
                                           language='en')
 
     response = {
@@ -121,8 +121,8 @@ def get_comm_news(event, context):
 
     all_articles = newsapi.get_everything(q='communication service',
                                           sources='bbc-news,abc-news,cnn,fox-news',
-                                          from_param='2020-05-25',
-                                          to='2020-05-31',
+                                          from_param=startDate(),
+                                          to=endDate(),
                                           language='en')
 
     response = {
