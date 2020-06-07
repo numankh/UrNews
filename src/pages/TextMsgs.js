@@ -7,6 +7,12 @@ class MyForm extends React.Component {
       phone: null,
     };
   }
+  mySubmitHandler = (event) => {
+    event.preventDefault();
+    alert("You are submitting " + this.state.topic);
+    this.setState({topic: ''});
+    this.setState({phone: null});
+  }
   myChangeHandler = (event) => {
     let nam = event.target.name;
     let val = event.target.value;
@@ -14,12 +20,14 @@ class MyForm extends React.Component {
   }
   render() {
     return (
-      <form>
+      <form onSubmit={this.mySubmitHandler}>
+        {/* <h1>Hello {this.state.topic} {this.state.phone}</h1> */}
         <h2>Get notifications on your phone about news that matters to you!</h2>
         <p>Enter your news related topic:</p>
         <input
           type='text'
           name='topic'
+          required
           onChange={this.myChangeHandler}
         />
         <p>Enter your phone number:</p>
@@ -32,6 +40,14 @@ class MyForm extends React.Component {
           onChange={this.myChangeHandler}
           />
         <small> Format: 123-456-7890</small>
+        <br/><br/>
+        <input
+          type='submit'
+        />
+        <input 
+          type="reset" 
+          value="Reset"
+        />
       </form>
       
     );
