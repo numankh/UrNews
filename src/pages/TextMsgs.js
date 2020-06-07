@@ -9,7 +9,7 @@ class MyForm extends React.Component {
   }
   mySubmitHandler = (event) => {
     event.preventDefault();
-    alert("You are submitting " + this.state.topic);
+    alert("You are willing to receive notifications about: " + this.state.topic);
     this.setState({topic: ''});
     this.setState({phone: null});
   }
