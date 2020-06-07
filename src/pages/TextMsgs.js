@@ -1,35 +1,42 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-
 class MyForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { 
-      phone_number: '' 
+    this.state = {
+      topic: '',
+      phone: null,
     };
   }
-  mySubmitHandler = (event) => {
-    event.preventDefault();
-    alert("You are submitting " + this.state.phone_number);
-  }
   myChangeHandler = (event) => {
-    this.setState({phone_number: event.target.value});
+    let nam = event.target.name;
+    let val = event.target.value;
+    this.setState({[nam]: val});
   }
   render() {
     return (
-      <form onSubmit={this.mySubmitHandler}>
-      <h1>Hello {this.state.phone_number}</h1>
-      <p>Enter your name, and submit:</p>
-      <input
-        type='text'
-        onChange={this.myChangeHandler}
-      />
-      <input
-        type='submit'
-      />
+      <form>
+        <h2>Get notifications on your phone about news that matters to you!</h2>
+        <p>Enter your news related topic:</p>
+        <input
+          type='text'
+          name='topic'
+          onChange={this.myChangeHandler}
+        />
+        <p>Enter your phone number:</p>
+        <input 
+          type="tel" 
+          id="phone" 
+          name="phone"
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          required
+          onChange={this.myChangeHandler}
+          />
+        <small> Format: 123-456-7890</small>
       </form>
+      
     );
   }
 }
+
 
 export default MyForm
