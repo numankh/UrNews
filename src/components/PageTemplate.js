@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import FeedItem from '../components/FeedItem';
 import Grid from '@material-ui/core/Grid';
 
+import gridStyles from "../styles/grid.module.css"
+
 
 class PageTemplate extends Component {
 
@@ -23,23 +25,62 @@ class PageTemplate extends Component {
 
   render() {
     return (
-      <div>
+      <div>      
+        <div className={gridStyles.normal}>
+            <h1>{this.props.pageTitle}</h1>
+            <h2>Articles from {this.state.startDate} - {this.state.endDate}</h2>
+
+            <Grid container spacing={3}>
+              {this.state.articles.map((article) => (
+                <Grid item xs={4}>
+                  <FeedItem 
+                    title={article.title} 
+                    description={article.description} 
+                    url={article.url}
+                    image={article.urlToImage}
+                  />
+                </Grid>
+              ))}
+            </Grid>
+        </div>
+
+        <div className={gridStyles.medium}>
+            <h1>{this.props.pageTitle}</h1>
+            <h2>Articles from {this.state.startDate} - {this.state.endDate}</h2>
+
+            <Grid container spacing={5}>
+              {this.state.articles.map((article) => (
+                <Grid item xs={6} spacing={1}>
+                  <FeedItem 
+                    title={article.title} 
+                    description={article.description} 
+                    url={article.url}
+                    image={article.urlToImage}
+                  />
+                </Grid>
+              ))}
+            </Grid>
+        </div>
+
+        <div className={gridStyles.small}>
           <h1>{this.props.pageTitle}</h1>
           <h2>Articles from {this.state.startDate} - {this.state.endDate}</h2>
 
-          <Grid container spacing={3}>
-            {this.state.articles.map((article) => (
-              <Grid item xs={4}>
-                <FeedItem 
-                  title={article.title} 
-                  description={article.description} 
-                  url={article.url}
-                  image={article.urlToImage}
-                />
-              </Grid>
-            ))}
-          </Grid>
-       </div>
+          <Grid container spacing={5}>
+              {this.state.articles.map((article) => (
+                <Grid item xs={20} spacing={1}>
+                  <FeedItem 
+                    title={article.title} 
+                    description={article.description} 
+                    url={article.url}
+                    image={article.urlToImage}
+                  />
+                </Grid>
+              ))}
+            </Grid>
+=        </div>
+
+      </div>
     );
   }
 }

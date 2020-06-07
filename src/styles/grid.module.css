@@ -1,0 +1,43 @@
+.item {
+    margin-bottom: 3%;
+}
+
+.small {
+    display: none;
+}
+
+.medium {
+    display: none;
+}
+
+/* On screens that are 992px wide or less, the background color is blue */
+@media screen and (min-width: 600px) and (max-width: 900px){
+    .small {
+        display: none;
+    }
+    
+    .medium {
+        display: unset;
+    }
+
+    .normal {
+        display: none;
+    }
+
+}
+
+/* On screens that are 600px wide or less, the background color is olive */
+@media screen and (min-width: 300px) and (max-width: 599px){
+    .normal {
+        display: none;
+    }
+
+    .medium {
+        display: none;
+    }
+
+    .small {
+        display: unset;
+    }
+
+}
