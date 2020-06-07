@@ -125,7 +125,7 @@ export default function MiniDrawer() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            StockSignal
+            UrNews | The News That Matters To You
           </Typography>
         </Toolbar>
       </AppBar>
