@@ -1,4 +1,11 @@
 # UrNews 
+
+## Techologies Used
+
+* Front-end: React and Material-UI
+* REST API: AWS Lambda and Serverless
+* Back-end: Python and the News API
+
 ## Resources I Used When Building This App
 
 ### Front-end
